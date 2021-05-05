@@ -1,13 +1,18 @@
 [package]
 name = "include-base64"
 version = "0.1.0"
-authors = ["Adam Spofford <pieflavor.mc@gmail.com>"]
+authors = ["Adam Spofford <aspofford.as@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "A macro to include a file as a base64-encoded string at compile time"
+homepage = "https://github.com/pie-flavor/include-base64"
+repository = "https://github.com/pie-flavor/include-base64"
 edition = "2018"
+readme = "README.md"
+keywords = ["include", "base64", "include_str", "macro"]
+categories = ["encoding", "no-std"]
 
 [lib]
 proc-macro = true
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 base64 = "0.13"

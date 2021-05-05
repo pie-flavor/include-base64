@@ -1,3 +1,5 @@
+//! include-base64 is a library for including a file as a base64 string, à la [`std::include_str!`].
+#![deny(missing_docs)]
 extern crate proc_macro;
 #[macro_use]
 extern crate syn;
@@ -14,6 +16,14 @@ use proc_macro::TokenStream;
 use quote::quote;
 use syn::LitStr;
 
+/// Includes a file as a base-64 string literal at compile time.
+///
+/// # Example
+///
+/// ```rust
+/// # use include_base64::include_base64;
+/// const MY_FILE_BUT_IN_BASE64: &str = include_base64!("my_file.txt");
+/// ```
 #[proc_macro]
 pub fn include_base64(input: TokenStream) -> TokenStream {
     let string = parse_macro_input!(input as LitStr).value();
