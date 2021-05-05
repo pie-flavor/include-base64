@@ -1,0 +1,15 @@
+[package]
+name = "include-base64"
+version = "0.1.0"
+authors = ["Adam Spofford <pieflavor.mc@gmail.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base64 = "0.13"
+quote = "1.0.9"
+syn = { version = "1", default-features = false, features = ["parsing", "proc-macro", "full"] }
